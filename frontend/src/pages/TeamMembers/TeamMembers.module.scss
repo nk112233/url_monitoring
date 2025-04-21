@@ -1,0 +1,84 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.teamMembers {
+  padding: 2rem;
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    h1 {
+      font-size: 2.4rem;
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    .inviteButton {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      padding: 0.8rem 1.6rem;
+      background-color: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.4rem;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+
+      &:hover {
+        background-color: var(--primary-dark);
+      }
+
+      svg {
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  .membersGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .emptyState {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 4rem;
+    background-color: var(--background-secondary);
+    border-radius: 12px;
+    
+    p {
+      font-size: 1.6rem;
+      color: var(--text-secondary);
+      margin-bottom: 1.6rem;
+    }
+
+    button {
+      padding: 1rem 2rem;
+      background-color: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.4rem;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+
+      &:hover {
+        background-color: var(--primary-dark);
+      }
+    }
+  }
+
+  .error {
+    text-align: center;
+    color: var(--error);
+    padding: 2rem;
+    font-size: 1.6rem;
+  }
+} 

@@ -1,0 +1,71 @@
+@import "@/assets/sass/utils/variables";
+.members {
+  color: $primary-text-color;
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+  }
+  &__card {
+    padding: 1.4rem 1rem;
+    border-radius: 5px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: #27293be5;
+    box-shadow: 0, 0, #0000, 0 0 #0000, 0 0 #0000, 0 0 #0000,
+      0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    position: relative;
+  }
+  .menuToggleButton {
+    cursor: pointer;
+    position: relative;
+    .menuListWrapper {
+      position: absolute;
+      top: 100%;
+      bottom: -5px;
+      right: 0;
+    }
+  }
+  &__content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  &__image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgb(114, 114, 27);
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 600;
+    display: grid;
+    place-items: center;
+    text-transform: uppercase;
+  }
+  &__details {
+    p:nth-child(1) {
+      font-size: 1.3rem;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      //   justify-content: space-between;
+    }
+  }
+  &__details {
+    p:nth-child(2) {
+      margin-top: 5px;
+      small {
+        line-height: 0px;
+        display: inline-block;
+        background: $primary-blue;
+        font-size: 1.1rem;
+        color: rgba(255, 255, 255, 0.596);
+        padding: 8px;
+        border-radius: 10px;
+      }
+    }
+  }
+}

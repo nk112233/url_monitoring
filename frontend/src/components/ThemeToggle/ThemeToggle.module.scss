@@ -1,0 +1,26 @@
+@import "../../assets/sass/utils/variables.scss";
+
+.themeToggle {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  color: #fff;
+
+  &:hover {
+    background-color: rgba(147, 157, 184, 0.2);
+  }
+
+  &.dark {
+    color: #fff;
+  }
+
+  &.light {
+    color: #1c1e2f;
+  }
+} 

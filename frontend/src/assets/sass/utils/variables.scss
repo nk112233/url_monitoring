@@ -1,0 +1,51 @@
+$inter: "Inter", sans-serif;
+$montserrat: "Montserrat", sans-serif;
+
+$warning: #ff4242;
+
+// Dark theme colors
+$dark-primary-blue: #1c1e2f;
+$dark-secondary-blue: #293040;
+$dark-primary-text: #ffffff;
+$dark-secondary-text: #728eb8;
+$dark-border: #3b4254;
+$dark-active-link: #45495594;
+$dark-hover-bg: rgba(147, 157, 184, 0.2);
+
+// Light theme colors
+$light-primary-blue: #ffffff;
+$light-secondary-blue: #f8fafc;
+$light-primary-text: #1a202c;
+$light-secondary-text: #4a5568;
+$light-border: #e2e8f0;
+$light-active-link: #edf2f7;
+$light-hover-bg: rgba(74, 85, 104, 0.1);
+
+// Common colors
+$primary-button: #5056ed;
+
+:root {
+  --primary-bg: #{$dark-primary-blue};
+  --secondary-bg: #{$dark-secondary-blue};
+  --primary-text: #{$dark-primary-text};
+  --secondary-text: #{$dark-secondary-text};
+  --border-color: #{$dark-border};
+  --active-link-bg: #{$dark-active-link};
+  --hover-bg: #{$dark-hover-bg};
+}
+
+:root[data-theme="light"] {
+  --primary-bg: #{$light-primary-blue};
+  --secondary-bg: #{$light-secondary-blue};
+  --primary-text: #{$light-primary-text};
+  --secondary-text: #{$light-secondary-text};
+  --border-color: #{$light-border};
+  --active-link-bg: #{$light-active-link};
+  --hover-bg: #{$light-hover-bg};
+}
+
+// Semantic color variables
+$primary-blue: var(--primary-bg);
+$secondary-blue: var(--secondary-bg);
+$primary-text-color: var(--secondary-text);
+$border-color: var(--border-color);

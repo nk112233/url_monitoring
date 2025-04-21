@@ -1,0 +1,45 @@
+@import "../../assets/sass/utils/variables.scss";
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: var(--primary-text);
+  padding-bottom: 10px;
+  position: relative;
+
+  &_details {
+    border-radius: 5px;
+    font-size: 1.2rem;
+    display: flex;
+    padding: 6px 10px;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    color: var(--primary-text);
+    &:hover {
+      background-color: var(--hover-bg);
+    }
+
+    p {
+      color: var(--primary-text) !important;
+      margin: 0;
+    }
+
+    svg {
+      color: var(--primary-text);
+    }
+  }
+  &_pp {
+    .letters {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: rgb(73, 153, 7);
+      color: #fff;
+      display: grid;
+      font-size: 1.1rem;
+      place-items: center;
+      font-weight: 600;
+    }
+  }
+}

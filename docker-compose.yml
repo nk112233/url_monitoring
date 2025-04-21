@@ -1,0 +1,20 @@
+services:
+  backend:
+    build: ./backend
+    image: upguard-backend
+    container_name: backend-container
+    ports:
+      - "5000:5000"
+    env_file:
+      - ./backend/.env
+    restart: unless-stopped
+
+  frontend:
+    build: ./frontend
+    image: upguard-frontend
+    container_name: frontend-container
+    ports:
+      - "5173:5173"
+    restart: unless-stopped
+    depends_on:
+      - backend

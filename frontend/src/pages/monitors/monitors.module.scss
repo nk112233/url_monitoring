@@ -1,0 +1,66 @@
+@import "../../assets/sass/utils/variables.scss";
+@import "../../assets/sass/utils/mixins.scss";
+
+.monitors {
+  &_head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    &_left {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    
+    &_right {
+      display: flex;
+      gap: 10px;
+    }
+
+    h2 {
+      font-size: 2.4rem;
+      color: var(--primary-text);
+    }
+
+    button {
+      @include primaryButton;
+    }
+    
+    .refresh_button {
+      background: transparent;
+      border: none;
+      color: var(--primary-text);
+      cursor: pointer;
+      padding: 8px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      &:disabled {
+        cursor: not-allowed;
+        opacity: 0.7;
+      }
+
+      &.spinning {
+        animation: spin 1s linear infinite;
+      }
+    }
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

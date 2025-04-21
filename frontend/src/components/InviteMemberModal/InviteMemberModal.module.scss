@@ -1,0 +1,99 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.form {
+  width: 100%;
+  max-width: 480px;
+
+  .error {
+    padding: 1rem;
+    margin-bottom: 1.6rem;
+    background-color: var(--error-light);
+    color: var(--error);
+    border-radius: 8px;
+    font-size: 1.4rem;
+  }
+
+  .formGroup {
+    margin-bottom: 2rem;
+
+    label {
+      display: block;
+      margin-bottom: 0.8rem;
+      font-size: 1.4rem;
+      color: var(--text-primary);
+      font-weight: 500;
+    }
+
+    input,
+    select {
+      width: 100%;
+      padding: 1rem;
+      font-size: 1.4rem;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background-color: var(--background-primary);
+      color: var(--text-primary);
+      transition: border-color 0.2s ease;
+
+      &:focus {
+        outline: none;
+        border-color: var(--primary);
+      }
+
+      &::placeholder {
+        color: var(--text-tertiary);
+      }
+    }
+
+    select {
+      cursor: pointer;
+      appearance: none;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+      background-repeat: no-repeat;
+      background-position: right 1rem center;
+      background-size: 1.6rem;
+      padding-right: 4rem;
+    }
+  }
+
+  .actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.2rem;
+    margin-top: 3rem;
+
+    button {
+      padding: 1rem 2rem;
+      font-size: 1.4rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+
+      &:disabled {
+        opacity: 0.7;
+        cursor: not-allowed;
+      }
+    }
+
+    .cancelButton {
+      background: none;
+      border: 1px solid var(--border);
+      color: var(--text-primary);
+
+      &:hover:not(:disabled) {
+        background-color: var(--background-secondary);
+      }
+    }
+
+    .submitButton {
+      background-color: var(--primary);
+      border: none;
+      color: white;
+
+      &:hover:not(:disabled) {
+        background-color: var(--primary-dark);
+      }
+    }
+  }
+} 
